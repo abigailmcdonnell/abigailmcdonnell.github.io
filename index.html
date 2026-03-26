@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abigail McDonnell — Home</title>
+  <meta name="description" content="Abigail McDonnell" />
+  <link rel="stylesheet" href="index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* HERO PHOTO */
+  .hero-photo {
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    object-fit: cover;
+    object-position: top center; /* focus on the top so forehead shows */
+    display: block;
+    margin: 0 auto;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+    /* HOBBY GRID */
+    .hobby-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 2rem;
+    }
+
+    .hobby-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #f8f8f8;
+      transition: transform 0.2s;
+    }
+
+    .hobby-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Maintain square aspect ratio for photos */
+    .hobby-card::before {
+      content: "";
+      display: block;
+      padding-top: 100%; /* square container */
+    }
+
+    .hobby-photo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="index.html" class="brand-link">Abigail McDonnell</a>
+      </div>
+      <nav class="main-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="contact.html" class="btn btn--outline">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- HERO SECTION -->
+    <section class="hero-split">
+      <div class="hero-text">
+        <p class="hero-eyebrow">PhD Student · NSF GRFP Fellow</p>
+        <h1 class="hero-name">Abigail<br>McDonnell</h1>
+        <p class="hero-lede">I study how the atmosphere absorbs and redistributes energy — using radiative transfer models, satellite observations, and large model ensembles to reduce uncertainty in climate projections.</p>
+        <div class="hero-actions">
+          <a href="about.html" class="btn">About Me</a>
+          <a href="projects.html" class="btn btn--ghost">Research</a>
+          <a href="./research_figs/cv.pdf" class="btn btn--ghost">CV</a>
+        </div>
+        <p class="hero-affil">University of Miami Rosenstiel School &mdash; Advisor: Dr. Brian Soden</p>
+      </div>
+
+      <div class="hero-visual">
+      <img src="./images/prof_headshot.jpg" alt="Abigail McDonnell" class="hero-photo" onerror="this.style.display='none';">
+    </div>
+    </section>
+
+    <!-- HOBBY PHOTOS SECTION -->
+    <section class="hobby-section">
+      <div class="hobby-grid">
+        <div class="hobby-card">
+          <img src="./images/pr_pigeon.jpg" alt="Pigeon photo" class="hobby-photo">
+        </div>
+        <div class="hobby-card">
+          <img src="./images/paddleboard.jpg" alt="Paddleboarding photo" class="hobby-photo">
+        </div>
+        <div class="hobby-card">
+          <img src="./images/pr_sunflower.jpg" alt="Sunflower photo" class="hobby-photo">
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <section class="quick-links">
+      <h2>Research highlights</h2>
+      <div class="grid grid--3">
+        <article class="card">
+          <h3>CO₂ radiative forcing</h3>
+          <p>Nonlinear interactions between forcings and how they shape energy transport in the climate system.</p>
+          <a href="project-co2.html" class="link">See project →</a>
+        </article>
+        <article class="card">
+          <h3>Model constraints</h3>
+          <p>Using historical model performance to narrow uncertainty in future regional precipitation projections.</p>
+          <a href="https://doi.org/10.1029/2024EF004844" target="_blank" rel="noopener" class="link">Published in Earth's Future →</a>
+        </article>
+        <article class="card">
+          <h3>Sea ice predictability</h3>
+          <p>Seasonal-to-interannual Antarctic sea ice predictability in CMIP6 models at NOAA GFDL.</p>
+          <a href="projects.html" class="link">See project →</a>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p>Last updated March 2026 — Abigail McDonnell</p>
+      </div>
+      <div class="footer-right">
+        <a href="https://github.com/abigailmcdonnell" aria-label="GitHub"><img src="./images/github_black.png" alt="GitHub" class="icon"></a>
+        <a href="https://www.linkedin.com/in/ammcdonnell" aria-label="LinkedIn"><img src="./images/linkedin_black.png" alt="LinkedIn" class="icon"></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
